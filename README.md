@@ -58,7 +58,7 @@ Same as ?ANY but return the matching subsequence.
 
 *** =some (parser)
 
-Same as %SOME but return the matching subsequence
+Same as %SOME but return the matching subsequence.
 
 *** %prog1 (&rest parsers)
 
