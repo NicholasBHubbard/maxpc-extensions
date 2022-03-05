@@ -21,13 +21,13 @@ output of intermediate parsers to variables that can be used as input to
 subsequent parsers. Variables named _ are ignored.
 
 Example:
-
+#+BEGIN_SRC 
 (%let* ((foo (=foo-parser))
         (bar (=bar-parser))
         (_   (?blah-parser))
         (baz (=baz-parser foo bar))
   (list foo bar baz)))
-
+#+END_SRC 
 *** ?null ()
 
 Succeed and return NIL without consuming any input.
