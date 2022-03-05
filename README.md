@@ -4,6 +4,8 @@
 
 Extensions for Max Rottenkolber's [[rovides][MaxPC parser library]].
 
+* Functionality
+
 *** =identity (value)
 
 Return VALUE without consuming any input.
