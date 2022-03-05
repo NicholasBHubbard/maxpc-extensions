@@ -71,3 +71,7 @@ Match PARSERS in sequence and return the result of the last parser.
 *** =as-keyword (parser)
 
 Transform the string result of PARSER into a keyword symbol.
+
+* Contributing
+
+Feel free to submit a PR for any functionality you deem fit.
