@@ -6,7 +6,7 @@
   (:export #:parse-success-p
            #:parse-total-success-p
            #:%bind
-           #:%ret
+           #:=identity
            #:%let*
            #:?null
            #:=eq
@@ -51,15 +51,15 @@ consumes all of INPUT and return NIL otherwise."
 
 ;;; ----------------------------------------------------
 
-(defun %ret (val)
-  "Monadic return function."
+(defun =identity (val)
+  "Always succeeds and returns VAL without consuming any input."
   (lambda (input) (values input val)))
 
 ;;; ----------------------------------------------------
 
 (defmacro %let* (bindings &body body)
-  "Convenience macro around chaining together %BIND calls with a culminating
-%RET. This macro works much like Haskell's do notation.
+  "Convenience macro around chaining together %BIND calls with a culminating.
+This macro allows defining parsers in a style much like Haskell's do notation.
 
 Example: (%let* ((foo (=foo-parser))
                  (bar (=bar-parser))
@@ -67,7 +67,7 @@ Example: (%let* ((foo (=foo-parser))
                  (baz (=baz-parser foo bar))
            (list foo bar baz)))"
   (if (null bindings)
-      `(%ret (progn ,@body))
+      `(=identity (progn ,@body))
       (let* ((binding (first bindings))
              (var     (first binding))
              (parser  (second binding)))
@@ -81,7 +81,7 @@ Example: (%let* ((foo (=foo-parser))
 
 (defun ?null ()
   "Succeed and return NIL without consuming any input."
-  (%maybe (?satisfies (lambda (x) (declare (ignore x)) nil))))
+  (=identity nil))
 
 ;;; ----------------------------------------------------
 
