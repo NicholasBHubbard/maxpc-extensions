@@ -23,8 +23,8 @@
 ;;; ----------------------------------------------------
 
 (defun parse-success-p (input parser)
-  "Return T if applying PARSER to INPUT results in a successful parse and NIL
-otherwise."
+  "Return T if applying PARSER to INPUT results in a successful parse and return
+NIL otherwise."
   (handler-case
       (nth-value 1 (parse input parser))
     (error (e) (declare (ignore e)) nil)))
