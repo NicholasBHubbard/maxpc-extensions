@@ -1,6 +1,6 @@
 ;;;; Extensions for Max Rottenkolber's MaxPC parsing library.
 
-(defpackage #:maxpc-ext
+(defpackage #:maxpc-extensions
   (:documentation "Extensions for Max Rottenkolber's MaxPC parsing library.")
   (:use #:cl #:maxpc #:maxpc.char)
   (:export #:parse-success-p

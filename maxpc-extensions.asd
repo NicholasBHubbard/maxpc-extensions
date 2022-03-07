@@ -1,9 +1,9 @@
-;;;; System definition for maxpc-ext.
+;;;; System definition for maxpc-extensions.
 
-(defsystem "maxpc-ext"
+(defsystem "maxpc-extensions"
   :description "Extensions for Max Rottenkolber's MaxPC parsing library."
   :version "1.0"
   :author "Nicholas Hubbard <nicholashubbard@posteo.net>"
   :license "GNU Affero General Public License"
   :depends-on ("maxpc")
-  :components ((:file "maxpc-ext")))
+  :components ((:file "maxpc-extensions")))
