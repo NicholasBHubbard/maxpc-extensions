@@ -20,6 +20,8 @@
            #:%progn
            #:=as-keyword))
 
+(in-package #:maxpc-extensions)
+
 ;;; ----------------------------------------------------
 
 (defun parse-success-p (input parser)
