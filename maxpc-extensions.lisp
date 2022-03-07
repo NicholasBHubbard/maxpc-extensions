@@ -60,8 +60,8 @@ consumes all of INPUT and return NIL otherwise."
 ;;; ----------------------------------------------------
 
 (defmacro %let* (bindings &body body)
-  "Convenience macro around chaining together %BIND calls with a culminating.
-This macro allows defining parsers in a style much like Haskell's do notation.
+  "Convenience macro around chaining together %BIND calls. This macro allows
+defining parsers in a style much like Haskell's do notation.
 
 Example: (%let* ((foo (=foo-parser))
                  (bar (=bar-parser))
