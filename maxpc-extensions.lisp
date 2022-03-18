@@ -54,7 +54,7 @@ consumes all of INPUT and return NIL otherwise."
 ;;; ----------------------------------------------------
 
 (defun =identity (val)
-  "Always succeeds and returns VAL without consuming any input."
+  "Always succeed and return VAL without consuming any input."
   (lambda (input) (values input val)))
 
 ;;; ----------------------------------------------------
