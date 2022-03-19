@@ -2,7 +2,7 @@
 #+title: MaxPC Extensions 
 #+author: Nicholas Hubbard
 
-Extensions for Max Rottenkolber's [[rovides][MaxPC parser library]].
+Extensions for Max Rottenkolber's [[https://github.com/eugeneia/maxpc][MaxPC parser library]].
 
 * Functionality
 
